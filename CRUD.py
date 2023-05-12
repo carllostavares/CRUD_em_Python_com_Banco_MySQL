@@ -8,23 +8,48 @@ conexao = mysql.connector.connect(
 )
 cursor = conexao.cursor()
 
-#CRUD
-id_cpf_cliente = "111.222.333-44"
-nome_cliente =  "Carlos Tavares"
-nome_porduto = "Pizza"
-valor_venda = 70.50
 
-comando = f'INSERT INTO tb_vendas (id_cpf_cliente,nome_cliente,nome_porduto,valor_venda) VALUES ("{id_cpf_cliente}","{nome_cliente}",' \
-f'"{nome_porduto}",{valor_venda})'
+#CREATE
+#id_cpf_cliente = "999.222.333-00"
+#nome_cliente =  "Rodrigo Gomes"
+#nome_produto = "Bolo"
+#valor_venda = 100.90
 
+#comando = f'INSERT INTO tb_vendas (id_cpf_cliente,nome_cliente,nome_produto,valor_venda) VALUES ("{id_cpf_cliente}","{nome_cliente}",' \
+#f'"{nome_produto}",{valor_venda})'
+#cursor.execute(comando)
+#conexao.commit()
+
+#cursor.close()
+#conexao.close()
+
+#READ
+#comando = f'SELECT * FROM  tb_vendas'
+#cursor.execute(comando)
+#conexao.commit() #adita o banco de dados
+#resultado = cursor.fetchall() #ler o banco de dados
+#print(resultado)
+
+#cursor.close()
+#conexao.close()
+
+#UPDATE
+#nome_produto = "bolo"
+#valor_venda = 200.50
+
+#comando = f'UPDATE tb_vendas SET valor_venda = {valor_venda} WHERE nome_produto = "{nome_produto}"'
+#cursor.execute(comando)
+#conexao.commit() #a
+
+#cursor.close()
+#conexao.close()
+
+#DELETE
+nome_produto = "bolo"
+
+comando = f'DELETE FROM tb_vendas WHERE nome_produto = "{nome_produto}"'
 cursor.execute(comando)
-conexao.commit() #adita o banco de dados
-#resultado = cursosr.fecthall() #ler o banco de dados
+conexao.commit()
 
 cursor.close()
 conexao.close()
-
-#CREATE
-#READ
-#UPDATE
-#DELETE

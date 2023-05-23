@@ -10,18 +10,18 @@ cursor = conexao.cursor()
 
 
 #CREATE
-#id_cpf_cliente = "999.222.333-00"
-#nome_cliente =  "Rodrigo Gomes"
-#nome_produto = "Bolo"
-#valor_venda = 100.90
+""" id_cpf_cliente = "878.222.333-00"
+nome_cliente =  "Nathalia Salles"
+nome_produto = "biscoito"
+valor_venda = 8.90
 
-#comando = f'INSERT INTO tb_vendas (id_cpf_cliente,nome_cliente,nome_produto,valor_venda) VALUES ("{id_cpf_cliente}","{nome_cliente}",' \
-#f'"{nome_produto}",{valor_venda})'
-#cursor.execute(comando)
-#conexao.commit()
+comando = f'INSERT INTO tb_vendas (id_cpf_cliente,nome_cliente,nome_produto,valor_venda) VALUES ("{id_cpf_cliente}","{nome_cliente}",' \
+f'"{nome_produto}",{valor_venda})'
+cursor.execute(comando)
+conexao.commit()
 
-#cursor.close()
-#conexao.close()
+cursor.close()
+conexao.close() """
 
 #READ
 #comando = f'SELECT * FROM  tb_vendas'
@@ -45,11 +45,9 @@ cursor = conexao.cursor()
 #conexao.close()
 
 #DELETE
-nome_produto = "bolo"
+nome_cliente = "Rodrigo Gomes"
 
-comando = f'DELETE FROM tb_vendas WHERE nome_produto = "{nome_produto}"'
+comando = f'DELETE FROM tb_vendas WHERE nome_cliente = "{nome_cliente}"'
 cursor.execute(comando)
 conexao.commit()
 
-cursor.close()
-conexao.close()

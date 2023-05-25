@@ -4,25 +4,29 @@ conexao = mysql.connector.connect(
     host = 'localhost',
     user ='root',
     password ='Wlwl2350@Ju' ,
-    database = 'bd_lista_vendas',
+    database = 'fim_de_feira',
 )
+
 cursor = conexao.cursor()
 
+""" #CREATE
+id_cpf_cliente = "000.000.111-00"
+nome = "Joao Carlos"
+sobrenome = "Gomes"
+email = "testando@teste.com"
+sexo = "M"
+data_nasc = '1996-07-09'
+senha = "19191919"
+id_numero = 2
+numero = "84988293122"
 
-#CREATE
-""" id_cpf_cliente = "878.222.333-00"
-nome_cliente =  "Nathalia Salles"
-nome_produto = "biscoito"
-valor_venda = 8.90
-
-comando = f'INSERT INTO tb_vendas (id_cpf_cliente,nome_cliente,nome_produto,valor_venda) VALUES ("{id_cpf_cliente}","{nome_cliente}",' \
-f'"{nome_produto}",{valor_venda})'
+comando = f'call inserir_cliente("{id_cpf_cliente}","{nome}","{sobrenome}","{email}","{sexo}","{data_nasc}","{senha}","{id_numero}","{numero}")'
 cursor.execute(comando)
 conexao.commit()
 
 cursor.close()
-conexao.close() """
-
+conexao.close()
+ """
 #READ
 #comando = f'SELECT * FROM  tb_vendas'
 #cursor.execute(comando)
@@ -39,15 +43,8 @@ conexao.close() """
 
 #comando = f'UPDATE tb_vendas SET valor_venda = {valor_venda} WHERE nome_produto = "{nome_produto}"'
 #cursor.execute(comando)
-#conexao.commit() #a
+#conexao.commit()
 
 #cursor.close()
 #conexao.close()
-
-#DELETE
-nome_cliente = "Rodrigo Gomes"
-
-comando = f'DELETE FROM tb_vendas WHERE nome_cliente = "{nome_cliente}"'
-cursor.execute(comando)
-conexao.commit()
 

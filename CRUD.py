@@ -28,26 +28,26 @@ cursor.close()
 conexao.close()
  """
 #READ
-nome = "Pedro"
+""" nome = "Pedro"
 comando = f'SELECT * FROM tb_cliente where nome = "{nome}"'
 cursor.execute(comando)
 resultado = cursor.fetchall() #ler o banco de dados
 print(resultado)
 
 cursor.close()
-conexao.close()
+conexao.close() """
 
 #UPDATE
-#nome_produto = "bolo"
-#valor_venda = 200.50
+""" nome = "carlos"
+email = "EMAILCORRETO@HOTMAIL.COM"
 
-#comando = f'UPDATE tb_vendas SET valor_venda = {valor_venda} WHERE nome_produto = "{nome_produto}"'
-#cursor.execute(comando)
-#conexao.commit()
+comando = f'UPDATE tb_cliente SET email = "{email}" WHERE nome = "{nome}"'
+cursor.execute(comando)
+conexao.commit()
 
-#cursor.close()
-#conexao.close()
-
+cursor.close()
+conexao.close()
+ """
 """ #DELETE
 
 nome = "Pedro"

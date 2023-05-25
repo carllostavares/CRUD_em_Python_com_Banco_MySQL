@@ -28,14 +28,14 @@ cursor.close()
 conexao.close()
  """
 #READ
-#comando = f'SELECT * FROM  tb_vendas'
-#cursor.execute(comando)
-#conexao.commit() #adita o banco de dados
-#resultado = cursor.fetchall() #ler o banco de dados
-#print(resultado)
+nome = "Pedro"
+comando = f'SELECT * FROM tb_cliente where nome = "{nome}"'
+cursor.execute(comando)
+resultado = cursor.fetchall() #ler o banco de dados
+print(resultado)
 
-#cursor.close()
-#conexao.close()
+cursor.close()
+conexao.close()
 
 #UPDATE
 #nome_produto = "bolo"
@@ -48,7 +48,7 @@ conexao.close()
 #cursor.close()
 #conexao.close()
 
-#DELETE
+""" #DELETE
 
 nome = "Pedro"
 
@@ -58,3 +58,4 @@ conexao.commit()
 
 cursor.close()
 conexao.close()
+ """

@@ -48,3 +48,13 @@ conexao.close()
 #cursor.close()
 #conexao.close()
 
+#DELETE
+
+nome = "Pedro"
+
+comando = f'DELETE FROM tb_cliente WHERE nome = "{nome}"'
+cursor.execute(comando)
+conexao.commit()
+
+cursor.close()
+conexao.close()
